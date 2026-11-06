@@ -1,4 +1,4 @@
-import { ExtensionHost } from "@magritte/sdk"
+import { beginForwardingMeaningfulUIEvents, ExtensionHost } from "@magritte/sdk"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 import "@/styles.css"
@@ -39,6 +39,9 @@ try {
             }
         },
     })
+
+    // Set up UI event forwarding
+    await beginForwardingMeaningfulUIEvents(extensionHost)
 
     // Set up tanstack query
     const queryClient = new QueryClient()
