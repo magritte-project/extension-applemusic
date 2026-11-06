@@ -202,6 +202,9 @@ importers:
       dotenv:
         specifier: ^18.0.9
         version: 18.0.9
+      express:
+        specifier: ^4.22.3
+        version: 4.22.3
       jose:
         specifier: ^6.2.12
         version: 6.2.15

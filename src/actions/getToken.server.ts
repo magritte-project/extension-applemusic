@@ -1,5 +1,7 @@
-import "@/actions/env"
+import dotenv from "dotenv"
 import { importJWK, importPKCS8, SignJWT } from "jose"
+
+dotenv.config()
 
 export async function getDeveloperToken(): Promise<{ developerToken: string }> {
     const teamId = process.env["TEAM_ID"]
